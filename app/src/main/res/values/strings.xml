@@ -6,4 +6,7 @@
     <string name="hello_home">Hello home</string>
     <string name="hello_message">hello message</string>
     <string name="hello_person">Hello person</string>
+    <string name="item_title">Item title</string>
+    <string name="todo">TODO</string>
+    <string name="rmb">¥：100 RMB</string>
 </resources>
