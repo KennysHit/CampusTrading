@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class MysqlObject {
     private String driver = "com.mysql.jdbc.Driver";//Mysql驱动
-    private String myurl = "jdbc:mysql://172.20.10.4/test_database";//Mysql数据库连接Url
+    private String myurl = "jdbc:mysql://100.70.73.46/test_database";//Mysql数据库连接Url
     private String myuser = "kennys";//Mysql用户名
     private String mypassword = "dsy199866";//Mysql密码
     private Connection connection = null;
