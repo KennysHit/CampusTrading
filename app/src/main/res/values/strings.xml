@@ -3,4 +3,7 @@
     <string name="home">home</string>
     <string name="message">message</string>
     <string name="person">person</string>
+    <string name="hello_home">Hello home</string>
+    <string name="hello_message">hello message</string>
+    <string name="hello_person">Hello person</string>
 </resources>
