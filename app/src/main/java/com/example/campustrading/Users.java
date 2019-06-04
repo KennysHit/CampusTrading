@@ -2,23 +2,23 @@ package com.example.campustrading;
 
 public class Users {
 //    用户识别码
-    public class Id{
+class Id {
 
     }
 //    电话
-    public class Tell{
+ class Tell{
 
     }
 //    姓名
-    public class Name{
+ class Name {
 
     }
 //    学校
-    public class School{
+ class School {
 
     }
 //    学号
-    public class School_Id{
+class School_Id {
 
     }
 
