@@ -9,4 +9,9 @@
     <string name="item_title">Item title</string>
     <string name="todo">TODO</string>
     <string name="rmb">¥：100 RMB</string>
+    <string name="account_number_text">账号:</string>
+    <string name="user_password_text">密码:</string>
+    <string name="logon_text">登陆</string>
+    <string name="register_text">注册</string>
+    <string name="forget_password_text">忘记密码</string>
 </resources>
