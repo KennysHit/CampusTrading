@@ -1,18 +1,18 @@
 package com.example.campustrading;
 
 public class User {
-    private String id;
+    private int id;
     private String name;
 
     public User(){
 
     }
-    public User ( String id , String name ) {
+    public User ( int id , String name ) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId () {
+    public int getId () {
         return id;
     }
 
@@ -20,7 +20,7 @@ public class User {
         return name;
     }
 
-    public void setId ( String id ) {
+    public void setId ( int id ) {
         this.id = id;
     }
 

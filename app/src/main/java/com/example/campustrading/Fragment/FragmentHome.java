@@ -1,4 +1,4 @@
-package com.example.campustrading;
+package com.example.campustrading.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,11 +12,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.campustrading.ItemListAdapter;
+import com.example.campustrading.ItemObject;
+import com.example.campustrading.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentHome extends Fragment {
-    private List<ItemObject> data;
+    private List< ItemObject > data;
     private RecyclerView itemList;
     private ItemListAdapter itemListAdapter;
     private View view;//定义view用来设置fragment的layout
@@ -25,6 +29,8 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView ( @NonNull LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
         view = inflater.inflate ( R.layout.fragment_home,container,false );
+
+
         dataInit ();
         initRecyclerView ();
         return view;

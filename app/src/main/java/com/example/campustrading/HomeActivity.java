@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.campustrading.Fragment.FragmentHome;
+import com.example.campustrading.Fragment.FragmentMessage;
+import com.example.campustrading.Fragment.FragmentPerson;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -15,8 +18,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.layout_main );
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById ( R.id.bottom_navigation );
+        SQLiteDB.getInstance ( this );
 
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById ( R.id.bottom_navigation );
 
         bottomNavigationView.setOnNavigationItemSelectedListener ( new BottomNavigationView.OnNavigationItemSelectedListener ( ) {
             @Override
