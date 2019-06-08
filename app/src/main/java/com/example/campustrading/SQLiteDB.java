@@ -13,6 +13,9 @@ public class SQLiteDB {
         this.db = SQLiteDatabase.openOrCreateDatabase ( "dir",null );
     }
 
+    public static void getInstance(HomeActivity homeActivity) {
+    }
+
     private void createTable(String table){
         //执行SQL语句
         db.execSQL("create table "+table+"( id integer primary key autoincrement,name text)");
