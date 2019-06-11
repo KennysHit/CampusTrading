@@ -4,26 +4,22 @@ package com.example.campustrading;
 import cn.bmob.v3.BmobObject;
 
 public class User extends BmobObject {
-    private String userSchool;
+    private String schoolName;
     private String schoolId;
     private String userName;
     private String phoneNumber;
     private String password;
 
-    public User ( String userSchool , String schoolId , String userName , String phoneNumber , String password ) {
-        this.userSchool = userSchool;
-        this.schoolId = schoolId;
-        this.userName = userName;
-        this.phoneNumber = phoneNumber;
-        this.password = password;
+    public User () {
+        this.setTableName ( "User" );
     }
 
     public String getPassword () {
         return password;
     }
 
-    public String getUserSchool () {
-        return userSchool;
+    public String getSchoolName (){
+        return schoolName;
     }
 
     public String getSchoolId () {
@@ -39,8 +35,8 @@ public class User extends BmobObject {
     }
 
 
-    public void setUserSchool ( String userSchool ) {
-        this.userSchool = userSchool;
+    public void setSchoolName (String schoolName) {
+        this.schoolName = schoolName;
     }
 
     public void setSchoolId ( String schoolId ) {

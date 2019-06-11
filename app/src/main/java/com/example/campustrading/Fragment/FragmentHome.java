@@ -1,6 +1,5 @@
 package com.example.campustrading.Fragment;
 
-import android.app.Person;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.campustrading.HomeActivity;
 import com.example.campustrading.ItemListAdapter;
 import com.example.campustrading.ItemObject;
 import com.example.campustrading.R;
@@ -35,19 +33,6 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView ( @NonNull LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
         view = inflater.inflate ( R.layout.fragment_home,container,false );
-
-        TestUser p2 = new TestUser ();
-        p2.setName ( "XiaoGang" );
-        p2.save(new SaveListener<String> () {
-            @Override
-            public void done( String objectId, BmobException e) {
-                if(e==null){
-                    Toast.makeText ( getActivity () ,"添加数据成功，返回objectId为："+objectId,Toast.LENGTH_LONG).show ();
-                }else{
-                    Toast.makeText (getActivity (),"创建数据失败：" + e.getMessage(),Toast.LENGTH_LONG).show ();
-                }
-            }
-        });
 
         dataInit ();
         initRecyclerView ();

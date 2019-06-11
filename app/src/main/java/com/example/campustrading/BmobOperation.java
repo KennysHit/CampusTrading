@@ -36,7 +36,7 @@ public class BmobOperation {
             public void done ( List< User > list , BmobException e ) {
                 if(e==null){
                     for (User user : list) {
-                        user.getUserSchool ();
+                        user.getSchoolName ();
                         user.getSchoolId ();
                         user.getPhoneNumber ();
                         user.getUserName ();

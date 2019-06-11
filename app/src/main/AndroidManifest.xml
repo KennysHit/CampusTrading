@@ -20,11 +20,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="campustrading.BmobContentProvider">
+            android:authorities="com.example.campustrading.BmobContentProvider">
         </provider>
         <activity android:name=".HomeActivity">
             <intent-filter>
