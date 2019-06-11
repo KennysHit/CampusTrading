@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHoler> {
+public class                                                        ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHoler> {
     private List<ItemObject> data;
     private Context context;
 
