@@ -16,6 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
@@ -29,10 +30,22 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.google.android.material:material:1.1.0-alpha06'
-    implementation files('libs/mysql-connector-java-5.1.47.jar')
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
-    implementation 'com.lzy.imagepicker:imagepicker:1.0.0'
-    implementation 'com.github.xxl6097:okhttputils:2.4.1'
+
+
+    implementation 'cn.bmob.android:bmob-sdk:3.7.4'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.2"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.okio:okio:2.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+
+    implementation 'cn.bmob.android:bmob-sdk:3.7.4'
+    implementation 'com.squareup.okhttp:okhttp:2.4.0'//CDN文件服务使用okhttp相关包进行文件的上传和下载（必填）
+    implementation 'com.squareup.okio:okio:2.1.0'
+
+    implementation 'cn.bmob.android:http-legacy:1.0'//兼容Android6.0系统
+
 }

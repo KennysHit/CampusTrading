@@ -11,14 +11,20 @@ import com.example.campustrading.Fragment.FragmentMessage;
 import com.example.campustrading.Fragment.FragmentPerson;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import cn.bmob.v3.Bmob;
+
 
 public class HomeActivity extends AppCompatActivity {
+
+    public static User user = null;
+
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.layout_main );
 
-        SQLiteDB.getInstance ( this );
+        Bmob.initialize ( this,"22727d4417ac45765e87663e667d87a4" );
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById ( R.id.bottom_navigation );
 
