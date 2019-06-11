@@ -1,5 +1,6 @@
 package com.example.campustrading.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -66,8 +67,11 @@ public class FragmentRegister extends Fragment {
                             public void done ( String s , BmobException e ) {
                                 if(e==null){
                                     Toast.makeText ( getActivity ( ) , "注册成功！" , Toast.LENGTH_LONG ).show ( );
-                                    FragmentPerson fragmentPerson = new FragmentPerson ();
-                                    getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentPerson ).commit ();
+                                    Intent intent = new Intent ( getContext (),FragmentPerson.class );
+                                    intent.putExtra ( "userInfo",user.getUserName ()+"@@@"+user.getPassword () );
+                                    startActivity ( intent );
+//                                    FragmentPerson fragmentPerson = new FragmentPerson ();
+//                                    getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentPerson ).commit ();
                                 }else{
                                     Toast.makeText ( getActivity ( ) , "注册失败，错误："+e.getMessage () , Toast.LENGTH_LONG ).show ( );
                                     Log.e ( "error:",e.getMessage () );
