@@ -2,33 +2,41 @@ package com.example.campustrading;
 
 public class ItemObject {
     private String name;
-    private String imgUrl;
+    private String img;
     private String money;
-
-    public ItemObject ( String name , String imgUrl , String money ) {
+    private String info;
+    public ItemObject ( String name , String img , String money ) {
         this.name = name;
-        this.imgUrl = imgUrl;
+        this.img = img;
         this.money = money;
+    }
+
+    public String getInfo () {
+        return info;
     }
 
     public String getName () {
         return name;
     }
 
-    public String getImgUrl () {
-        return imgUrl;
+    public String getImg () {
+        return img;
     }
 
     public String getMoney () {
         return money;
     }
 
+    public void setInfo ( String info ) {
+        this.info = info;
+    }
+
     public void setName ( String name ) {
         this.name = name;
     }
 
-    public void setImgUrl ( String imgUrl ) {
-        this.imgUrl = imgUrl;
+    public void setImg ( String img ) {
+        this.img = img;
     }
 
     public void setMoney ( String money ) {

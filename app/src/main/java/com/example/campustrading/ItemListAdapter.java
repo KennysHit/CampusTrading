@@ -88,7 +88,7 @@ public class                                                        ItemListAdap
             textView_title.setText ( itemObject.getName () );
             textView_money.setText ( "¥  "+itemObject.getMoney ()+" 元" );
             Glide.with(context)
-                    .load(itemObject.getImgUrl ())
+                    .load(itemObject.getImg ())
                     .override(320,320)
                     .placeholder ( R.drawable.img_loadingfail )
                     .into(imageView_img);

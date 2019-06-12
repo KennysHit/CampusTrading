@@ -23,4 +23,8 @@
     <string name="register_text">注册</string>
     <string name="forget_password_text">忘记密码</string>
     <string name="back">返回</string>
+    <string name="clean">清除</string>
+    <string name="logout">退出登陆</string>
+    <string name="changeInfo">修改信息</string>
+    <string name="additem">上架商品</string>
 </resources>
