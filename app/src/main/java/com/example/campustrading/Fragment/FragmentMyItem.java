@@ -16,10 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.campustrading.ItemListAdapter;
 import com.example.campustrading.ItemObject;
 import com.example.campustrading.R;
-import com.example.campustrading.TestUser;
 import com.example.campustrading.User;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -27,31 +24,31 @@ import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobQueryResult;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SQLQueryListener;
+import cn.bmob.v3.listener.UpdateListener;
 
-public class FragmentHome extends Fragment {
+import static com.example.campustrading.MainActivity.objid;
+
+public class FragmentMyItem extends Fragment {
+    private View view;
     private RecyclerView itemList;
     private ItemListAdapter itemListAdapter;
-    private User user = new User ();
-    private View view;//定义view用来设置fragment的layout
+    private User user = BmobUser.getCurrentUser(User.class);
 
     @Nullable
     @Override
     public View onCreateView ( @NonNull LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
-        view = inflater.inflate ( R.layout.fragment_home,container,false );
+        view =  inflater.inflate ( R.layout.fragment_myitem ,container, false );
 
         dataInit ();
+
         return view;
-
     }
-
-
     public void dataInit(){
-        user = BmobUser.getCurrentUser ( user.getClass () );
-        String bql="select * from item";
-        new BmobQuery<ItemObject> ().doSQLQuery(bql,new SQLQueryListener<ItemObject> (){
+        String bql="select * from item where itemhost = ?";
+        new BmobQuery<ItemObject>().doSQLQuery(bql,new SQLQueryListener<ItemObject>(){
 
             @Override
-            public void done( BmobQueryResult<ItemObject> result, BmobException e) {
+            public void done(BmobQueryResult<ItemObject> result, BmobException e) {
                 if(e ==null){
                     List<ItemObject> list = (List<ItemObject>) result.getResults();
                     if(list!=null && list.size()>0){
@@ -63,27 +60,42 @@ public class FragmentHome extends Fragment {
                     Log.i("smile", "错误码："+e.getErrorCode()+"，错误描述："+e.getMessage());
                 }
             }
-        });
+        },user.getMobilePhoneNumber ());
     }
-    private void initRecyclerView(List<ItemObject> data) {
+
+    private void initRecyclerView( final List<ItemObject> data) {
         //获取RecyclerView
-        itemList =(RecyclerView)view.findViewById ( R.id.home_item_list );
-        //创建adapte
+        itemList =( RecyclerView )view.findViewById ( R.id.userwindow_item_list );
+        //创建adapter
         itemListAdapter = new ItemListAdapter (getActivity(), data);
-        itemList.setLayoutManager(new LinearLayoutManager(getActivity ()));
+        itemList.setLayoutManager(new LinearLayoutManager (getActivity ()));
         //给RecyclerView设置adapter
         itemList.setAdapter(itemListAdapter);
         //设置layoutManager,可以设置显示效果，是线性布局、grid布局，还是瀑布流布局
         itemListAdapter.setOnItemClickListener ( new ItemListAdapter.OnItemClickListener ( ) {
             @Override
             public void onClick ( int position ) {
-                Toast.makeText ( getActivity (),"short click!",Toast.LENGTH_LONG ).show ();
+                System.out.println ( data.get ( position ) );
+                objid = data.get ( position ).getObjectId ();
+                FragmentMyItemInfo fragmentMyItemInfo = new FragmentMyItemInfo ();
+                getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentMyItemInfo ).commit ();
             }
         } );
         itemListAdapter.setOnItemLongClickListener ( new ItemListAdapter.OnItemLongClickListener ( ) {
             @Override
             public void onLongClick ( int position ) {
-                Toast.makeText ( getActivity (),"long click",Toast.LENGTH_LONG ).show ();
+                objid = data.get ( position ).getObjectId ();
+                user.setObjectId ( objid );
+                user.delete ( new UpdateListener ( ) {
+                    @Override
+                    public void done ( BmobException e ) {
+                        if(e==null){
+                            Toast.makeText ( getActivity (),"删除成功！",Toast.LENGTH_LONG ).show ();
+                        }else{
+                            Toast.makeText (getActivity (),"删除失败："+e.getMessage()+","+e.getErrorCode(),Toast.LENGTH_LONG).show ();
+                        }
+                    }
+                } );
             }
         } );
     }

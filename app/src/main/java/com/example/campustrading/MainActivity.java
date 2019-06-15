@@ -3,9 +3,7 @@ package com.example.campustrading;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.campustrading.Fragment.FragmentHome;
 import com.example.campustrading.Fragment.FragmentMessage;
@@ -15,9 +13,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import cn.bmob.v3.Bmob;
 
 
-public class HomeActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-
+    public static String objid;
+    public static User user;
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
@@ -50,5 +49,4 @@ public class HomeActivity extends AppCompatActivity {
             }
         } );
     }
-
 }

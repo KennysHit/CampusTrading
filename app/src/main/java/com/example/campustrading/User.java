@@ -6,8 +6,12 @@ import cn.bmob.v3.BmobUser;
 public class User extends BmobUser {
     private String schoolName;
     private String schoolId;
+    private int transaction;
 
 
+    public int getTransaction () {
+        return transaction;
+    }
 
     public String getSchoolName (){
         return schoolName;
@@ -18,8 +22,11 @@ public class User extends BmobUser {
     }
 
 
+    public void setTransaction ( int transaction ) {
+        this.transaction = transaction;
+    }
 
-    public void setSchoolName (String schoolName) {
+    public void setSchoolName ( String schoolName) {
         this.schoolName = schoolName;
     }
 

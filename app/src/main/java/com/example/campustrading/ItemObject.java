@@ -1,45 +1,48 @@
 package com.example.campustrading;
 
-public class ItemObject {
-    private String name;
-    private String img;
-    private String money;
-    private String info;
-    public ItemObject ( String name , String img , String money ) {
-        this.name = name;
-        this.img = img;
-        this.money = money;
+import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.http.I;
+
+public class ItemObject extends BmobObject {
+    private String itemname;
+    private String iteminfo;
+    private Float itemprice;
+    private String itemhost;
+
+    public ItemObject(){
+        this.setTableName ( "item" );
     }
 
-    public String getInfo () {
-        return info;
+
+    public String getItemname () {
+        return itemname;
     }
 
-    public String getName () {
-        return name;
+    public String getIteminfo () {
+        return iteminfo;
     }
 
-    public String getImg () {
-        return img;
+    public Float getItemprice () {
+        return itemprice;
     }
 
-    public String getMoney () {
-        return money;
+    public String getItemhost () {
+        return itemhost;
     }
 
-    public void setInfo ( String info ) {
-        this.info = info;
+    public void setItemname ( String itemname ) {
+        this.itemname = itemname;
     }
 
-    public void setName ( String name ) {
-        this.name = name;
+    public void setIteminfo ( String iteminfo ) {
+        this.iteminfo = iteminfo;
     }
 
-    public void setImg ( String img ) {
-        this.img = img;
+    public void setItemprice ( Float itemprice ) {
+        this.itemprice = itemprice;
     }
 
-    public void setMoney ( String money ) {
-        this.money = money;
+    public void setItemhost ( String itemhost ) {
+        this.itemhost = itemhost;
     }
 }

@@ -15,8 +15,6 @@ import com.example.campustrading.R;
 import com.example.campustrading.User;
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.Map;
-
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
@@ -25,7 +23,7 @@ public class FragmentPerson extends Fragment {
     private View view;
     private TextInputEditText textInputEditText_username;
     private TextInputEditText textInputEditText_userpassword;
-    public User user = new User ();
+    private User user = BmobUser.getCurrentUser(User.class);
 
     @Nullable
     @Override
@@ -38,11 +36,10 @@ public class FragmentPerson extends Fragment {
         Button button_register = (Button)view.findViewById ( R.id.person_button_register );
         Button button_loading = (Button)view.findViewById ( R.id.person_button_loading );
 
-        user = BmobUser.getCurrentUser ( user.getClass () );
         if(user != null){
             // 允许用户使用应用
             FragmentUserWindow fragmentUserWindow = new FragmentUserWindow ();
-            getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentUserWindow ).commit ();
+            getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main, fragmentUserWindow ).commit ();
         }else{
             //缓存用户对象为空时， 可打开用户注册界面…
         }
@@ -61,7 +58,7 @@ public class FragmentPerson extends Fragment {
                             if ( e == null ) {
                                 Toast.makeText ( getActivity ( ) , "登录成功!" , Toast.LENGTH_LONG ).show ( );
                                 FragmentUserWindow fragmentUserWindow = new FragmentUserWindow ();
-                                getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentUserWindow ).commit ();
+                                getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main, fragmentUserWindow ).commit ();
                                 //通过BmobUser user = BmobUser.getCurrentUser()获取登录成功后的本地用户信息
                                 //如果是自定义用户对象MyUser，可通过MyUser user = BmobUser.getCurrentUser(MyUser.class)获取自定义用户信息
                             } else {

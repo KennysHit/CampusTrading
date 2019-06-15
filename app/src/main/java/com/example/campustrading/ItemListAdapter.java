@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class                                                        ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHoler> {
+public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHoler> {
     private List<ItemObject> data;
     private Context context;
 
@@ -50,7 +50,7 @@ public class                                                        ItemListAdap
 
     @Override
     public void onBindViewHolder ( @NonNull ItemViewHoler holder , final int position ) {
-        holder.bind ( this.context,data.get ( position ),position);
+        holder.bind ( this.context,data.get ( position ));
         holder.itemView.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
             public void onClick ( View v ) {
@@ -76,22 +76,12 @@ public class                                                        ItemListAdap
 
     public class ItemViewHoler extends RecyclerView.ViewHolder{
         private TextView textView_title;
-        private ImageView imageView_img;
-        private TextView textView_money;
         public ItemViewHoler ( @NonNull View itemView ) {
             super ( itemView );
             textView_title = (TextView) itemView.findViewById ( R.id.item_title );
-            imageView_img = (ImageView)itemView.findViewById ( R.id.item_img );
-            textView_money = (TextView)itemView.findViewById ( R.id.item_money );
         }
-        public void bind( Context context, ItemObject itemObject , int i) {
-            textView_title.setText ( itemObject.getName () );
-            textView_money.setText ( "¥  "+itemObject.getMoney ()+" 元" );
-            Glide.with(context)
-                    .load(itemObject.getImg ())
-                    .override(320,320)
-                    .placeholder ( R.drawable.img_loadingfail )
-                    .into(imageView_img);
+        public void bind( Context context, ItemObject itemObject) {
+            textView_title.setText ( itemObject.getItemname () );
         }
 
     }

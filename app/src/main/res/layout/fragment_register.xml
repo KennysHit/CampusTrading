@@ -7,7 +7,6 @@
     android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -97,7 +96,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout5"
+            android:id="@+id/textInputLayout9"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -119,7 +118,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout4"
+            android:id="@+id/textInputLayout8"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -137,7 +136,7 @@
                     android:id="@+id/register_phonenumber"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 

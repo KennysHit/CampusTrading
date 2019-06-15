@@ -27,7 +27,7 @@
             android:name="cn.bmob.v3.util.BmobContentProvider"
             android:authorities="com.example.campustrading.BmobContentProvider">
         </provider>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -36,25 +36,6 @@
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/item_img"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/todo"
-                app:srcCompat="@android:drawable/btn_star_big_on" />
-
-            <TextView
-                android:id="@+id/item_money"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:text="@string/rmb"
-                android:textAllCaps="false"
-                android:textColor="#E91E63"
-                android:textSize="24sp" />
         </LinearLayout>
 
 
