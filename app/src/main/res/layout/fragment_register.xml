@@ -41,7 +41,8 @@
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2">
+            app:layout_constraintVertical_bias="0.2"
+            >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/register_password"
@@ -157,7 +158,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.8" />
+            app:layout_constraintVertical_bias="0.8"
+            android:background="@drawable/shape"/>
 
         <Button
             android:id="@+id/register_button_back"
@@ -176,5 +178,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.9" />
+            app:layout_constraintVertical_bias="0.9"
+            android:background="@drawable/shape"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

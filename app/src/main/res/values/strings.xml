@@ -34,4 +34,5 @@
     <string name="itemprice">商品价格：</string>
     <string name="addsure">确认上架</string>
     <string name="myitems">我的商品</string>
+    <string name="user_name_">用户名-1</string>
 </resources>
