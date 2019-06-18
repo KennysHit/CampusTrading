@@ -5,7 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,7 +24,6 @@ import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobQueryResult;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SQLQueryListener;
-import cn.bmob.v3.listener.UpdateListener;
 
 import static com.example.campustrading.MainActivity.objid;
 
@@ -39,12 +38,21 @@ public class FragmentMyItem extends Fragment {
     public View onCreateView ( @NonNull LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
         view =  inflater.inflate ( R.layout.fragment_myitem ,container, false );
 
+        Button button_back = (Button ) view.findViewById ( R.id.myitem_button_back);
         dataInit ();
+
+        button_back.setOnClickListener ( new View.OnClickListener ( ) {
+            @Override
+            public void onClick ( View v ) {
+                FragmentUserWindow fragmentUserWindow = new FragmentUserWindow ();
+                getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentUserWindow ).commit ();
+            }
+        } );
 
         return view;
     }
     public void dataInit(){
-        String bql="select * from item where itemhost = ?";
+        String bql="select * from item where hosttel = ?";
         new BmobQuery<ItemObject>().doSQLQuery(bql,new SQLQueryListener<ItemObject>(){
 
             @Override
@@ -77,7 +85,7 @@ public class FragmentMyItem extends Fragment {
             public void onClick ( int position ) {
                 System.out.println ( data.get ( position ) );
                 objid = data.get ( position ).getObjectId ();
-                FragmentMyItemInfo fragmentMyItemInfo = new FragmentMyItemInfo ();
+                FragemntMyItemInfo fragmentMyItemInfo = new FragemntMyItemInfo ();
                 getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentMyItemInfo ).commit ();
             }
         } );
@@ -85,18 +93,8 @@ public class FragmentMyItem extends Fragment {
             @Override
             public void onLongClick ( int position ) {
                 objid = data.get ( position ).getObjectId ();
-                user.setObjectId ( objid );
-                user.delete ( new UpdateListener ( ) {
-                    @Override
-                    public void done ( BmobException e ) {
-                        if(e==null){
-                            Toast.makeText ( getActivity (),"删除成功！",Toast.LENGTH_LONG ).show ();
-                        }else{
-                            Toast.makeText (getActivity (),"删除失败："+e.getMessage()+","+e.getErrorCode(),Toast.LENGTH_LONG).show ();
-                        }
-                    }
-                } );
             }
         } );
     }
+
 }

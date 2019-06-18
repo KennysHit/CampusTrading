@@ -6,17 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:padding="10dp"
     android:orientation="horizontal">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="#00BCD4"
-        android:clickable="false"
-        android:foreground="?android:attr/selectableItemBackground">
+        android:clickable="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,7 +30,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/item_title"
-                android:textAllCaps="false"
                 android:textColor="#2238FF"
                 android:textSize="36sp"
                 android:textStyle="bold" />

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CampusTrading</string>
+    <string name="app_name">校园交易平台</string>
     <string name="home">home</string>
     <string name="message">message</string>
     <string name="person">person</string>
@@ -34,4 +34,11 @@
     <string name="itemprice">商品价格：</string>
     <string name="addsure">确认上架</string>
     <string name="myitems">我的商品</string>
+    <string name="buy">请求购买</string>
+    <string name="currentbuyer">当前购买者：</string>
+    <string name="usrebuy">确认购买</string>
+    <string name="cleanbuyer">清除申请</string>
+    <string name="schoolplace">学校：</string>
+    <string name="user">用户：</string>
+    <string name="yuan">元</string>
 </resources>

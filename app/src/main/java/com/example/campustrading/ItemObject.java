@@ -1,13 +1,23 @@
 package com.example.campustrading;
 
 import cn.bmob.v3.BmobObject;
-import cn.bmob.v3.http.I;
 
 public class ItemObject extends BmobObject {
     private String itemname;
     private String iteminfo;
     private Float itemprice;
-    private String itemhost;
+    private String hostname;
+    private String hosttel;
+    private String itemplace;
+    private String currentbuyer;
+
+    public String getCurrentbuyer () {
+        return currentbuyer;
+    }
+
+    public String getItemplace () {
+        return itemplace;
+    }
 
     public ItemObject(){
         this.setTableName ( "item" );
@@ -26,8 +36,12 @@ public class ItemObject extends BmobObject {
         return itemprice;
     }
 
-    public String getItemhost () {
-        return itemhost;
+    public String getHostname () {
+        return hostname;
+    }
+
+    public String getHosttel () {
+        return hosttel;
     }
 
     public void setItemname ( String itemname ) {
@@ -42,7 +56,20 @@ public class ItemObject extends BmobObject {
         this.itemprice = itemprice;
     }
 
-    public void setItemhost ( String itemhost ) {
-        this.itemhost = itemhost;
+    public void setHostname ( String hostname ) {
+        this.hostname = hostname;
+    }
+
+    public void setHosttel ( String hosttel ) {
+        this.hosttel = hosttel;
+    }
+
+    public void setItemplace ( String itemplace ) {
+        this.itemplace = itemplace;
+    }
+
+    public void setCurrentbuyer ( String currentbuyer ) {
+        this.currentbuyer = currentbuyer;
     }
 }
+

@@ -48,4 +48,8 @@ dependencies {
 
     implementation 'cn.bmob.android:http-legacy:1.0'//兼容Android6.0系统
 
+    //TODO 集成：1.2、配置IM SDK（bmob-im）版本和Data SDK（bmob-sdk）版本：特定版本的bmob-im依赖特定版本的bmob-sdk
+    implementation 'cn.bmob.android:bmob-im:2.1.4@aar'
+    implementation 'cn.bmob.android:bmob-sdk:3.7.3'
+
 }
