@@ -27,14 +27,12 @@
     <string name="changeInfo">修改信息</string>
     <string name="additem">上架商品</string>
     <string name="about">关于</string>
-    <string name="todo">TODO</string>
     <string name="transaction">交易数量：</string>
     <string name="item_name">商品名称：</string>
     <string name="iteminfo">商品描述：</string>
     <string name="itemprice">商品价格：</string>
     <string name="addsure">确认上架</string>
     <string name="myitems">我的商品</string>
-<<<<<<< HEAD
     <string name="buy">请求购买</string>
     <string name="currentbuyer">当前购买者：</string>
     <string name="usrebuy">确认购买</string>
@@ -42,7 +40,6 @@
     <string name="schoolplace">学校：</string>
     <string name="user">用户：</string>
     <string name="yuan">元</string>
-=======
-    <string name="user_name_">用户名-1</string>
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
+    <string name="user_name_">用户名：</string>
+    <string name="todo">TODO</string>
 </resources>

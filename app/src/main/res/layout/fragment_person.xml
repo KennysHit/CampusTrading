@@ -12,11 +12,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-<<<<<<< HEAD
         android:background="@drawable/shap"
-=======
-        android:background="@drawable/shape"
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
         android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,26 +28,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-<<<<<<< HEAD
-        android:background="@drawable/shap"
-=======
         android:layout_marginBottom="8dp"
         android:background="@drawable/shape"
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
         android:text="@string/loading"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.85" />
-=======
-        app:layout_constraintVertical_bias="0.962"
-
-        />
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
-
     <ImageView
         android:id="@+id/person_img"
         android:layout_width="104dp"

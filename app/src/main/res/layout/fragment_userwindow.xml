@@ -99,18 +99,13 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/shap"
         android:text="@string/myitems"
-        android:textSize="20dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.85" />
-=======
-        app:layout_constraintVertical_bias="0.8"
-        android:background="@drawable/shape_1"/>
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
 
     <Button
         android:id="@+id/userwindow_additem"
@@ -122,18 +117,13 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/shap"
         android:text="@string/additem"
-        android:textSize="20dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.85" />
-=======
-        app:layout_constraintVertical_bias="0.9"
-        android:background="@drawable/shape_1"/>
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
 
     <ImageView
         android:id="@+id/imageView"
@@ -143,8 +133,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-<<<<<<< HEAD
         android:background="@drawable/img_loadingfail"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -157,19 +147,10 @@
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:background="#4D00E5FF"
-=======
-        android:text="@string/logout"
-        android:textSize="20dp"
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.3" />
-=======
-        app:layout_constraintVertical_bias="1"
-        android:background="@drawable/shape_1"/>
->>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
-
 </androidx.constraintlayout.widget.ConstraintLayout>
