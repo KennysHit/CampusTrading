@@ -34,6 +34,7 @@
     <string name="itemprice">商品价格：</string>
     <string name="addsure">确认上架</string>
     <string name="myitems">我的商品</string>
+<<<<<<< HEAD
     <string name="buy">请求购买</string>
     <string name="currentbuyer">当前购买者：</string>
     <string name="usrebuy">确认购买</string>
@@ -41,4 +42,7 @@
     <string name="schoolplace">学校：</string>
     <string name="user">用户：</string>
     <string name="yuan">元</string>
+=======
+    <string name="user_name_">用户名-1</string>
+>>>>>>> 899471f4e1eb29534d167b2735f1cae2780730f1
 </resources>
