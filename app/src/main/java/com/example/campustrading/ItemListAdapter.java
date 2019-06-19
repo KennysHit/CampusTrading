@@ -76,12 +76,15 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
 
     public class ItemViewHoler extends RecyclerView.ViewHolder{
         private TextView textView_title;
+        private TextView textView_yuan;
         public ItemViewHoler ( @NonNull View itemView ) {
             super ( itemView );
             textView_title = (TextView) itemView.findViewById ( R.id.item_title );
+            textView_yuan = (TextView)itemView.findViewById ( R.id.item_yuan );
         }
         public void bind( Context context, ItemObject itemObject) {
             textView_title.setText ( itemObject.getItemname () );
+            textView_yuan.setText ( itemObject.getItemprice ().toString ()+" 元" );
         }
 
     }

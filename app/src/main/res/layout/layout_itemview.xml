@@ -28,11 +28,26 @@
                 android:id="@+id/item_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="@string/item_title"
+                android:textAlignment="center"
                 android:textColor="#2238FF"
                 android:textSize="36sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:background="#2979FF" />
+
+            <TextView
+                android:id="@+id/item_yuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yuan"
+                android:textAlignment="center"
+                android:textColor="#FF3D00"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
