@@ -72,7 +72,7 @@ public class FragemntMyItemInfo extends Fragment {
                             textView_itemname.setText ( "商品名称："+itemObject.getItemname () );
                             textView_iteminfo.setText ( "商品信息："+itemObject.getIteminfo () );
                             textView_itemprice.setText ( itemObject.getItemprice ().toString () +" 元");
-                            textView_currentbuyer.setText ( "当前购买者："+itemObject.getCurrentbuyer ().toString () );
+                            textView_currentbuyer.setText ( "申请购买者："+itemObject.getCurrentbuyer ().toString () );
                         }
                     }else{
                         Toast.makeText ( getActivity (),"当前产品已不存在，请返回！",Toast.LENGTH_LONG ).show ();
@@ -107,7 +107,7 @@ public class FragemntMyItemInfo extends Fragment {
                                                 }
                                             }
                                     } );
-                                    textView_currentbuyer.setText ( "当前购买者：" );
+                                    textView_currentbuyer.setText ( "申请购买者：" );
                                 }
                             }else{
                                 Toast.makeText ( getActivity (),"当前产品已不存在，请返回！",Toast.LENGTH_LONG ).show ();
@@ -160,7 +160,7 @@ public class FragemntMyItemInfo extends Fragment {
                                             }
                                         } );
                                     }else {
-                                        Toast.makeText ( getActivity (),"当前没有人购买您的商品！",Toast.LENGTH_SHORT ).show ();
+                                        Toast.makeText ( getActivity (),"当前没有人申请购买您的商品！",Toast.LENGTH_SHORT ).show ();
                                     }
                                 }
                             }else{
