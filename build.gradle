@@ -19,7 +19,7 @@ allprojects {
         google()
         jcenter()
         jcenter()
-        //Bmob的maven仓库地址--必填
+        //Bmob的maven仓库地址
         maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
     }
 }

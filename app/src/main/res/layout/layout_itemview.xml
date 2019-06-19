@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/item_title"
                 android:textAlignment="center"
-                android:textColor="#2238FF"
+                android:textColor="#00B0FF"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -38,7 +38,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="100dp"
                 android:layout_height="2dp"
-                android:background="#2979FF" />
+                android:background="#00B0FF" />
 
             <TextView
                 android:id="@+id/item_yuan"

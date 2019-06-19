@@ -67,22 +67,22 @@ public class FragmentRegister extends Fragment {
                             @Override
                             public void done ( User user , BmobException e ) {
                                 if(e==null){
-                                    Toast.makeText ( getActivity ( ) , "注册成功！" , Toast.LENGTH_LONG ).show ( );
+                                    Toast.makeText ( getActivity ( ) , "注册成功！" , Toast.LENGTH_SHORT ).show ( );
                                     FragmentPerson fragmentPerson = new FragmentPerson ();
                                     getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentPerson ).commit ();
                                 }else{
-                                    Toast.makeText ( getActivity ( ) , "注册失败，错误："+e.getMessage () , Toast.LENGTH_LONG ).show ( );
+                                    Toast.makeText ( getActivity ( ) , "注册失败，错误："+e.getMessage () , Toast.LENGTH_SHORT ).show ( );
                                     Log.e ( "error:",e.getMessage () );
                                 }
                             }
                         } );
                     }else{
-                        Toast.makeText ( getActivity ( ) , "请确认两次密码输入相同！" , Toast.LENGTH_LONG ).show ( );
+                        Toast.makeText ( getActivity ( ) , "请确认两次密码输入相同！" , Toast.LENGTH_SHORT ).show ( );
                         textInputEditText_password.setText ( "" );
                         textInputEditText_password2.setText ( "" );
                     }
                 }else {
-                    Toast.makeText ( getActivity ( ) , "请将注册信息填写完整！" , Toast.LENGTH_LONG ).show ( );
+                    Toast.makeText ( getActivity ( ) , "请将注册信息填写完整！" , Toast.LENGTH_SHORT ).show ( );
                 }
             }
         } );

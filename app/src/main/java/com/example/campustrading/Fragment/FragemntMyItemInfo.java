@@ -140,19 +140,19 @@ public class FragemntMyItemInfo extends Fragment {
                                                 if (e == null) {
                                                     Log.i ("info:","更新用户信息成功");
                                                 } else {
-                                                    Snackbar.make(view, "更新用户信息失败" + e.getMessage(), Snackbar.LENGTH_LONG).show();
+                                                    Snackbar.make(view, "更新用户信息失败" + e.getMessage(), Snackbar.LENGTH_SHORT).show();
                                                     Log.e("error", e.getMessage());
                                                 }
                                             }
                                         });
-                                        Toast.makeText ( getActivity (),"交易成功！",Toast.LENGTH_LONG).show ();
+                                        Toast.makeText ( getActivity (),"交易成功！",Toast.LENGTH_SHORT).show ();
                                         ItemObject item = new ItemObject ();
                                         item.setObjectId ( objid );
                                         item.delete ( new UpdateListener ( ) {
                                             @Override
                                             public void done ( BmobException e ) {
                                                 if(e==null){
-                                                    Toast.makeText (getActivity (),"商品已下架",Toast.LENGTH_LONG).show ();
+                                                    Toast.makeText (getActivity (),"商品已下架",Toast.LENGTH_SHORT).show ();
 
                                                 }else{
                                                     Toast.makeText (getActivity (),"商品下架失败" + e.getMessage(),Toast.LENGTH_LONG).show ();
@@ -160,11 +160,11 @@ public class FragemntMyItemInfo extends Fragment {
                                             }
                                         } );
                                     }else {
-                                        Toast.makeText ( getActivity (),"当前没有人购买您的商品！",Toast.LENGTH_LONG ).show ();
+                                        Toast.makeText ( getActivity (),"当前没有人购买您的商品！",Toast.LENGTH_SHORT ).show ();
                                     }
                                 }
                             }else{
-                                Toast.makeText ( getActivity (),"当前产品已不存在，请返回！",Toast.LENGTH_LONG ).show ();
+                                Toast.makeText ( getActivity (),"当前产品已不存在，请返回！",Toast.LENGTH_SHORT ).show ();
                             }
                         }else{
                             Log.i("smile", "错误码："+e.getErrorCode()+"，错误描述："+e.getMessage());

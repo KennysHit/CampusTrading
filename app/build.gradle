@@ -22,11 +22,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha05'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
     testImplementation 'junit:junit:4.13-beta-3'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+
     implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.google.android.material:material:1.1.0-alpha06'
@@ -38,11 +39,9 @@ dependencies {
     implementation 'cn.bmob.android:bmob-sdk:3.7.4'
     implementation "io.reactivex.rxjava2:rxjava:2.2.2"
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-    implementation 'com.squareup.okio:okio:2.1.0'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
 
-    implementation 'cn.bmob.android:bmob-sdk:3.7.4'
     implementation 'com.squareup.okhttp:okhttp:2.4.0'//CDN文件服务使用okhttp相关包进行文件的上传和下载（必填）
     implementation 'com.squareup.okio:okio:2.1.0'
 

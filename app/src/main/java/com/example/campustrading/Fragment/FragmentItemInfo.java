@@ -126,23 +126,23 @@ public class FragmentItemInfo extends Fragment {
                                                 @Override
                                                 public void done(BmobException e) {
                                                     if(e==null){
-                                                        Toast.makeText (getActivity (),"请求成功:"+itemObject.getUpdatedAt(),Toast.LENGTH_LONG).show ();
+                                                        Toast.makeText (getActivity (),"请求成功:"+itemObject.getUpdatedAt(),Toast.LENGTH_SHORT).show ();
                                                         textView_issale.setText ( "您正在申请购买" );
                                                     }else{
-                                                        Toast.makeText (getActivity (),"请求失败：" + e.getMessage(),Toast.LENGTH_LONG).show ();
+                                                        Toast.makeText (getActivity (),"请求失败：" + e.getMessage(),Toast.LENGTH_SHORT).show ();
                                                     }
                                                 }
 
                                             });
                                         }else {
-                                            Toast.makeText ( getActivity (),"当前已有人申请购买！",Toast.LENGTH_LONG ).show ();
+                                            Toast.makeText ( getActivity (),"当前已有人申请购买！",Toast.LENGTH_SHORT ).show ();
                                         }
                                     }else {
-                                        Toast.makeText ( getActivity (),"您不能购买您自己的商品！",Toast.LENGTH_LONG ).show ();
+                                        Toast.makeText ( getActivity (),"您不能购买您自己的商品！",Toast.LENGTH_SHORT ).show ();
                                     }
                                 }
                             }else{
-                                Toast.makeText ( getActivity (),"当前产品已不存在，请返回！",Toast.LENGTH_LONG ).show ();
+                                Toast.makeText ( getActivity (),"当前产品已不存在，请返回！",Toast.LENGTH_SHORT ).show ();
                             }
                         }else{
                             Log.i("smile", "错误码："+e.getErrorCode()+"，错误描述："+e.getMessage());
@@ -186,7 +186,7 @@ public class FragmentItemInfo extends Fragment {
                         @Override
                         public void done ( BmobException e ) {
                             if ( e==null ) {
-                                Toast.makeText ( getActivity ( ) , "商品已下架" , Toast.LENGTH_LONG ).show ( );
+                                Toast.makeText ( getActivity ( ) , "商品已下架" , Toast.LENGTH_SHORT ).show ( );
                             }else {
                                 Log.e("商品下架失败：",e.getMessage () );
                             }
@@ -195,7 +195,7 @@ public class FragmentItemInfo extends Fragment {
 //                    FragmentHome fragmentHome = new FragmentHome ();
 //                    getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentHome ).commit ();
                 }else {
-                    Toast.makeText ( getContext (),"您还不是管理员，不能删除他人商品！",Toast.LENGTH_LONG).show ();
+                    Toast.makeText ( getContext (),"您还不是管理员，不能删除他人商品！",Toast.LENGTH_SHORT).show ();
                 }
                 return false;
             default:

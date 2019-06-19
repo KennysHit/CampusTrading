@@ -48,7 +48,7 @@ public class FragmentHome extends Fragment {
             dataInit ();
             textView_school.setText ( "学校："+user.getSchoolName () );
         }else{
-            Toast.makeText ( getActivity (),"请登录！", Toast.LENGTH_LONG).show ();
+            Toast.makeText ( getActivity (),"请登录！", Toast.LENGTH_SHORT).show ();
         }
 
 

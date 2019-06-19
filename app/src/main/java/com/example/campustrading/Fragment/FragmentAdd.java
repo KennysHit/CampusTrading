@@ -34,7 +34,7 @@ public class FragmentAdd extends Fragment {
         view = inflater.inflate ( R.layout.fragment_add,container,false);
 
         Button button_add = (Button)view.findViewById ( R.id.add_button_add );
-        Button button_back = (Button )view.findViewById ( R.id.add_button_back );
+        Button button_back = (Button )view.findViewById ( R.id.add_button_back);
         textInputEditText_itemname = (TextInputEditText )view.findViewById ( R.id.add_itemname );
         textInputEditText_iteminfo = (TextInputEditText )view.findViewById ( R.id.add_iteminfo );
         textInputEditText_itemprice = (TextInputEditText )view.findViewById ( R.id.add_itemprice );
@@ -58,17 +58,17 @@ public class FragmentAdd extends Fragment {
                         @Override
                         public void done ( String s , BmobException e ) {
                             if(e==null){
-                                Toast.makeText ( getActivity (),"添加商品成功！", Toast.LENGTH_LONG ).show ();
+                                Toast.makeText ( getActivity (),"添加商品成功！", Toast.LENGTH_SHORT ).show ();
                                 FragmentUserWindow fragmentUserWindow = new FragmentUserWindow ();
                                 getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main, fragmentUserWindow ).commit ();
                             }else {
-                                Toast.makeText ( getActivity (),"添加商品失败！", Toast.LENGTH_LONG ).show ();
+                                Toast.makeText ( getActivity (),"添加商品失败！", Toast.LENGTH_SHORT ).show ();
                             }
                         }
                     } );
 
                 }else {
-                    Toast.makeText ( getActivity (),"请将商品信息填写完整！",Toast.LENGTH_LONG ).show ();
+                    Toast.makeText ( getActivity (),"请将商品信息填写完整！",Toast.LENGTH_SHORT ).show ();
                 }
 
             }

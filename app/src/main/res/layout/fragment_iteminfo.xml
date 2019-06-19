@@ -64,12 +64,13 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/shap"
         android:text="@string/back"
+        android:textColor="#00B0FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <TextView
         android:id="@+id/iteminfo_user"
@@ -95,12 +96,13 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/shap"
         android:text="@string/buy"
+        android:textColor="#00B0FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <TextView
         android:id="@+id/iteminfo_issale"

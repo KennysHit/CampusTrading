@@ -56,18 +56,18 @@ public class FragmentPerson extends Fragment {
                         @Override
                         public void done ( User user , BmobException e ) {
                             if ( e == null ) {
-                                Toast.makeText ( getActivity ( ) , "登录成功!" , Toast.LENGTH_LONG ).show ( );
+                                Toast.makeText ( getActivity ( ) , "登录成功!" , Toast.LENGTH_SHORT ).show ( );
                                 FragmentUserWindow fragmentUserWindow = new FragmentUserWindow ();
                                 getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main, fragmentUserWindow ).commit ();
                                 //通过BmobUser user = BmobUser.getCurrentUser()获取登录成功后的本地用户信息
                                 //如果是自定义用户对象MyUser，可通过MyUser user = BmobUser.getCurrentUser(MyUser.class)获取自定义用户信息
                             } else {
-                                Toast.makeText ( getActivity ( ) , e.getMessage ( ) , Toast.LENGTH_LONG ).show ( );
+                                Toast.makeText ( getActivity ( ) , e.getMessage ( ) , Toast.LENGTH_SHORT ).show ( );
                             }
                         }
                     } );
                 }else {
-                    Toast.makeText ( getActivity ( ) ,"用户名或密码为空！" , Toast.LENGTH_LONG ).show ( );
+                    Toast.makeText ( getActivity ( ) ,"用户名或密码为空！" , Toast.LENGTH_SHORT ).show ( );
                 }
             }
         } );

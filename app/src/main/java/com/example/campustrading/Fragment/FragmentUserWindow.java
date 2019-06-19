@@ -78,7 +78,7 @@ public class FragmentUserWindow extends Fragment {
             case R.id.logout:
                 user.logOut();   //清除缓存用户对象
                 user = BmobUser.getCurrentUser(user.getClass ()); // 现在的currentUser是null了
-                Toast.makeText ( getActivity (),"退出成功！",Toast.LENGTH_LONG ).show ();
+                Toast.makeText ( getActivity (),"退出成功！",Toast.LENGTH_SHORT ).show ();
                 FragmentPerson fragmentPerson = new FragmentPerson ();
                 getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.view_main,fragmentPerson ).commit ();
                 return false;
