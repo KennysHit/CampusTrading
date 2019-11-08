@@ -29,8 +29,6 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobQueryResult;
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.http.I;
-import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SQLQueryListener;
 import cn.bmob.v3.listener.UpdateListener;
 
@@ -53,7 +51,7 @@ public class FragmentItemInfo extends Fragment {
         view = inflater.inflate ( R.layout.fragment_iteminfo ,container,false );
         setHasOptionsMenu ( true );
 
-        Button button_back = (Button )view.findViewById ( R.id.iteminfo_button_back );
+        Button button_back = (Button )view.findViewById ( R.id.iteminfo_back );
         Button button_buy = (Button )view.findViewById ( R.id.iteminfo_buy );
 
         textView_itemname = (TextView )view.findViewById ( R.id.iteminfo_itemname ) ;
